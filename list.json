@@ -1,0 +1,712 @@
+{
+  "endpoint": {
+    "name": "secretStorage",
+    "source": "C:\\www\\projects\\secretStorage",
+    "target": "*"
+  },
+  "canonicalDir": "C:\\www\\projects\\secretStorage",
+  "pkgMeta": {
+    "name": "secretStorage",
+    "dependencies": {
+      "angular-bootstrap": "angular-bootstrap#~0.11.0",
+      "angular-gravatar": "angular-gravatar#~0.1.4",
+      "fontawesome": "fontawesome#~4.1.0",
+      "bootstrap": "bootstrap#~3.1.1",
+      "ionicons": "ionicons#~1.4.1",
+      "jquery": "jquery#~2.1.1",
+      "jquery-migrate": "jquery-migrate#~1.2.1",
+      "sun-angular-diff": "0.0.1",
+      "angular-ui-router": "0.2.10-fix",
+      "ng-table": "0.3.2",
+      "sun-rest": "0.0.4"
+    },
+    "devDependencies": {}
+  },
+  "dependencies": {
+    "angular-bootstrap": {
+      "endpoint": {
+        "name": "angular-bootstrap",
+        "source": "angular-bootstrap",
+        "target": "~0.11.0"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\angular-bootstrap",
+      "pkgMeta": {
+        "author": {
+          "name": "https://github.com/angular-ui/bootstrap/graphs/contributors"
+        },
+        "name": "angular-bootstrap",
+        "version": "0.11.0",
+        "main": [
+          "./ui-bootstrap-tpls.js"
+        ],
+        "dependencies": {
+          "angular": ">=1"
+        },
+        "homepage": "https://github.com/angular-ui/bootstrap-bower",
+        "_release": "0.11.0",
+        "_resolution": {
+          "type": "version",
+          "tag": "0.11.0",
+          "commit": "75b302f82c1a3b0647695a3dfeacab0a153ea8a0"
+        },
+        "_source": "git://github.com/angular-ui/bootstrap-bower.git",
+        "_target": "~0.11.0",
+        "_originalSource": "angular-bootstrap",
+        "_direct": true
+      },
+      "extraneous": true,
+      "dependencies": {
+        "angular": {
+          "endpoint": {
+            "name": "angular",
+            "source": "angular",
+            "target": ">=1"
+          },
+          "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\angular",
+          "pkgMeta": {
+            "name": "angular",
+            "version": "1.2.16",
+            "main": "./angular.js",
+            "dependencies": {},
+            "homepage": "https://github.com/angular/bower-angular",
+            "_release": "1.2.16",
+            "_resolution": {
+              "type": "version",
+              "tag": "v1.2.16",
+              "commit": "7ae38b4a0cfced157e3486a0d6e2d299601723bb"
+            },
+            "_source": "git://github.com/angular/bower-angular.git",
+            "_target": "~1",
+            "_originalSource": "angular"
+          },
+          "dependencies": {},
+          "nrDependants": 1
+        }
+      },
+      "nrDependants": 1
+    },
+    "angular-gravatar": {
+      "endpoint": {
+        "name": "angular-gravatar",
+        "source": "angular-gravatar",
+        "target": "~0.1.4"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\angular-gravatar",
+      "pkgMeta": {
+        "name": "angular-gravatar",
+        "version": "0.1.4",
+        "description": "Angular.JS directive for gravatar images",
+        "author": "Sebastian Wallin",
+        "license": "MIT",
+        "homepage": "http://github.com/wallin/angular-gravatar",
+        "main": [
+          "./build/md5.js",
+          "./build/angular-gravatar.js"
+        ],
+        "ignore": [],
+        "dependencies": {
+          "angular": "~1.x"
+        },
+        "devDependencies": {
+          "angular-mocks": "~1.0.x"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git://github.com/wallin/angular-gravatar.git"
+        },
+        "_release": "0.1.4",
+        "_resolution": {
+          "type": "version",
+          "tag": "0.1.4",
+          "commit": "9e3f2ffaf26a116362fe342e0db6222c098886dd"
+        },
+        "_source": "git://github.com/wallin/angular-gravatar.git",
+        "_target": "~0.1.4",
+        "_originalSource": "angular-gravatar",
+        "_direct": true
+      },
+      "extraneous": true,
+      "dependencies": {
+        "angular": {
+          "endpoint": {
+            "name": "angular",
+            "source": "angular",
+            "target": "~1.x"
+          },
+          "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\angular",
+          "pkgMeta": {
+            "name": "angular",
+            "version": "1.2.16",
+            "main": "./angular.js",
+            "dependencies": {},
+            "homepage": "https://github.com/angular/bower-angular",
+            "_release": "1.2.16",
+            "_resolution": {
+              "type": "version",
+              "tag": "v1.2.16",
+              "commit": "7ae38b4a0cfced157e3486a0d6e2d299601723bb"
+            },
+            "_source": "git://github.com/angular/bower-angular.git",
+            "_target": "~1",
+            "_originalSource": "angular"
+          },
+          "dependencies": {},
+          "nrDependants": 1
+        }
+      },
+      "nrDependants": 1
+    },
+    "angular-ui-router": {
+      "endpoint": {
+        "name": "angular-ui-router",
+        "source": "angular-ui-router",
+        "target": "0.2.10-fix"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\angular-ui-router",
+      "pkgMeta": {
+        "name": "angular-ui-router",
+        "version": "0.2.10-fix",
+        "main": "./release/angular-ui-router.js",
+        "dependencies": {
+          "angular": ">= 1.0.8"
+        },
+        "ignore": [
+          "**/.*",
+          "node_modules",
+          "bower_components",
+          "component.json",
+          "package.json",
+          "lib",
+          "config",
+          "sample",
+          "test",
+          "tests",
+          "ngdoc_assets",
+          "Gruntfile.js",
+          "files.js"
+        ],
+        "_direct": true
+      },
+      "extraneous": true,
+      "linked": true,
+      "dependencies": {
+        "angular": {
+          "endpoint": {
+            "name": "angular",
+            "source": "angular",
+            "target": ">= 1.0.8"
+          },
+          "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\angular",
+          "pkgMeta": {
+            "name": "angular",
+            "version": "1.2.16",
+            "main": "./angular.js",
+            "dependencies": {},
+            "homepage": "https://github.com/angular/bower-angular",
+            "_release": "1.2.16",
+            "_resolution": {
+              "type": "version",
+              "tag": "v1.2.16",
+              "commit": "7ae38b4a0cfced157e3486a0d6e2d299601723bb"
+            },
+            "_source": "git://github.com/angular/bower-angular.git",
+            "_target": "~1",
+            "_originalSource": "angular"
+          },
+          "dependencies": {},
+          "nrDependants": 1
+        }
+      },
+      "nrDependants": 1
+    },
+    "bootstrap": {
+      "endpoint": {
+        "name": "bootstrap",
+        "source": "bootstrap",
+        "target": "~3.1.1"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\bootstrap",
+      "pkgMeta": {
+        "name": "bootstrap",
+        "version": "3.1.1",
+        "main": [
+          "./dist/css/bootstrap.css",
+          "./dist/js/bootstrap.js",
+          "./dist/fonts/glyphicons-halflings-regular.eot",
+          "./dist/fonts/glyphicons-halflings-regular.svg",
+          "./dist/fonts/glyphicons-halflings-regular.ttf",
+          "./dist/fonts/glyphicons-halflings-regular.woff"
+        ],
+        "ignore": [
+          "**/.*",
+          "_config.yml",
+          "CNAME",
+          "composer.json",
+          "CONTRIBUTING.md",
+          "docs",
+          "js/tests"
+        ],
+        "dependencies": {
+          "jquery": ">= 1.9.0"
+        },
+        "homepage": "https://github.com/twbs/bootstrap",
+        "_release": "3.1.1",
+        "_resolution": {
+          "type": "version",
+          "tag": "v3.1.1",
+          "commit": "a365d8689c3f3cee7f1acf86b61270ecca8e106d"
+        },
+        "_source": "git://github.com/twbs/bootstrap.git",
+        "_target": "~3.1.1",
+        "_originalSource": "bootstrap",
+        "_direct": true
+      },
+      "extraneous": true,
+      "dependencies": {
+        "jquery": {
+          "endpoint": {
+            "name": "jquery",
+            "source": "jquery",
+            "target": ">= 1.9.0"
+          },
+          "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\jquery",
+          "pkgMeta": {
+            "name": "jquery",
+            "version": "2.1.1",
+            "main": "dist/jquery.js",
+            "license": "MIT",
+            "ignore": [
+              "**/.*",
+              "build",
+              "speed",
+              "test",
+              "*.md",
+              "AUTHORS.txt",
+              "Gruntfile.js",
+              "package.json"
+            ],
+            "devDependencies": {
+              "sizzle": "1.10.19",
+              "requirejs": "2.1.10",
+              "qunit": "1.14.0",
+              "sinon": "1.8.1"
+            },
+            "keywords": [
+              "jquery",
+              "javascript",
+              "library"
+            ],
+            "homepage": "https://github.com/jquery/jquery",
+            "_release": "2.1.1",
+            "_resolution": {
+              "type": "version",
+              "tag": "2.1.1",
+              "commit": "4dec426aa2a6cbabb1b064319ba7c272d594a688"
+            },
+            "_source": "git://github.com/jquery/jquery.git",
+            "_target": "~2.1.1",
+            "_originalSource": "jquery",
+            "_direct": true
+          },
+          "dependencies": {},
+          "nrDependants": 1
+        }
+      },
+      "nrDependants": 1
+    },
+    "fontawesome": {
+      "endpoint": {
+        "name": "fontawesome",
+        "source": "fontawesome",
+        "target": "~4.1.0"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\fontawesome",
+      "pkgMeta": {
+        "name": "font-awesome",
+        "description": "Font Awesome",
+        "version": "4.1.0",
+        "keywords": [],
+        "homepage": "http://fontawesome.io",
+        "dependencies": {},
+        "devDependencies": {},
+        "license": [
+          "OFL-1.1",
+          "MIT",
+          "CC-BY-3.0"
+        ],
+        "main": [
+          "./css/font-awesome.css",
+          "./fonts/*"
+        ],
+        "ignore": [
+          "*/.*",
+          "*.json",
+          "src",
+          "*.yml",
+          "Gemfile",
+          "Gemfile.lock",
+          "*.md"
+        ],
+        "_release": "4.1.0",
+        "_resolution": {
+          "type": "version",
+          "tag": "v4.1.0",
+          "commit": "2649d91d18629bab071449b3bc4cb02761037a57"
+        },
+        "_source": "git://github.com/FortAwesome/Font-Awesome.git",
+        "_target": "~4.1.0",
+        "_originalSource": "fontawesome",
+        "_direct": true
+      },
+      "extraneous": true,
+      "dependencies": {},
+      "nrDependants": 1
+    },
+    "ionicons": {
+      "endpoint": {
+        "name": "ionicons",
+        "source": "ionicons",
+        "target": "~1.4.1"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\ionicons",
+      "pkgMeta": {
+        "ignore": [
+          "**/.*",
+          "builder",
+          "node_modules",
+          "bower_components",
+          "test",
+          "tests"
+        ],
+        "version": "1.4.1",
+        "name": "Ionicons",
+        "license": "MIT",
+        "authors": [
+          "Ben Sperry <ben@drifty.com>",
+          "Adam Bradley <adam@drifty.com>",
+          "Max Lynch <max@drifty.com>"
+        ],
+        "keywords": [
+          "fonts",
+          "icon font",
+          "icons",
+          "ionic",
+          "web font"
+        ],
+        "main": [
+          "css/ionicons.css",
+          "fonts/*"
+        ],
+        "homepage": "https://github.com/driftyco/ionicons",
+        "description": "Ionicons - free and beautiful icons from the creators of Ionic Framework",
+        "_release": "1.4.1",
+        "_resolution": {
+          "type": "version",
+          "tag": "v1.4.1",
+          "commit": "76925c32a033b7ff1acb64691e42d3014511bf7c"
+        },
+        "_source": "git://github.com/driftyco/ionicons.git",
+        "_target": "~1.4.1",
+        "_originalSource": "ionicons",
+        "_direct": true
+      },
+      "extraneous": true,
+      "dependencies": {},
+      "nrDependants": 1
+    },
+    "jquery": {
+      "endpoint": {
+        "name": "jquery",
+        "source": "jquery",
+        "target": "~2.1.1"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\jquery",
+      "pkgMeta": {
+        "name": "jquery",
+        "version": "2.1.1",
+        "main": "dist/jquery.js",
+        "license": "MIT",
+        "ignore": [
+          "**/.*",
+          "build",
+          "speed",
+          "test",
+          "*.md",
+          "AUTHORS.txt",
+          "Gruntfile.js",
+          "package.json"
+        ],
+        "devDependencies": {
+          "sizzle": "1.10.19",
+          "requirejs": "2.1.10",
+          "qunit": "1.14.0",
+          "sinon": "1.8.1"
+        },
+        "keywords": [
+          "jquery",
+          "javascript",
+          "library"
+        ],
+        "homepage": "https://github.com/jquery/jquery",
+        "_release": "2.1.1",
+        "_resolution": {
+          "type": "version",
+          "tag": "2.1.1",
+          "commit": "4dec426aa2a6cbabb1b064319ba7c272d594a688"
+        },
+        "_source": "git://github.com/jquery/jquery.git",
+        "_target": "~2.1.1",
+        "_originalSource": "jquery",
+        "_direct": true
+      },
+      "extraneous": true,
+      "dependencies": {},
+      "nrDependants": 1
+    },
+    "jquery-migrate": {
+      "endpoint": {
+        "name": "jquery-migrate",
+        "source": "jquery-migrate",
+        "target": "~1.2.1"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\jquery-migrate",
+      "pkgMeta": {
+        "name": "jquery-migrate",
+        "version": "1.2.1",
+        "homepage": "https://github.com/appleboy/jquery-migrate",
+        "_release": "1.2.1",
+        "_resolution": {
+          "type": "version",
+          "tag": "1.2.1",
+          "commit": "65f37b60ae3d305efbe1e85909e14c60d524d12a"
+        },
+        "_source": "git://github.com/appleboy/jquery-migrate.git",
+        "_target": "~1.2.1",
+        "_originalSource": "jquery-migrate",
+        "_direct": true
+      },
+      "extraneous": true,
+      "dependencies": {},
+      "nrDependants": 1
+    },
+    "ng-table": {
+      "endpoint": {
+        "name": "ng-table",
+        "source": "ng-table",
+        "target": "0.3.2"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\ng-table",
+      "pkgMeta": {
+        "name": "ng-table",
+        "version": "0.3.2",
+        "main": [
+          "ng-table.js",
+          "ng-table.min.css"
+        ],
+        "ignore": [
+          "examples",
+          "src"
+        ],
+        "dependencies": {
+          "angular": "~1.2.9"
+        },
+        "devDependencies": {
+          "angular-mocks": "~1.2.9"
+        },
+        "_direct": true
+      },
+      "extraneous": true,
+      "linked": true,
+      "dependencies": {
+        "angular": {
+          "endpoint": {
+            "name": "angular",
+            "source": "angular",
+            "target": "~1.2.9"
+          },
+          "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\angular",
+          "pkgMeta": {
+            "name": "angular",
+            "version": "1.2.16",
+            "main": "./angular.js",
+            "dependencies": {},
+            "homepage": "https://github.com/angular/bower-angular",
+            "_release": "1.2.16",
+            "_resolution": {
+              "type": "version",
+              "tag": "v1.2.16",
+              "commit": "7ae38b4a0cfced157e3486a0d6e2d299601723bb"
+            },
+            "_source": "git://github.com/angular/bower-angular.git",
+            "_target": "~1",
+            "_originalSource": "angular"
+          },
+          "dependencies": {},
+          "nrDependants": 1
+        }
+      },
+      "nrDependants": 1
+    },
+    "sun-angular-diff": {
+      "endpoint": {
+        "name": "sun-angular-diff",
+        "source": "sun-angular-diff",
+        "target": "0.0.1"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\sun-angular-diff",
+      "pkgMeta": {
+        "name": "sun-angular-diff",
+        "version": "0.0.1",
+        "homepage": "https://github.com/maxaon/sun-angular-diff",
+        "authors": [
+          "maxaon <maxaon@xakep.ru>"
+        ],
+        "description": "Different things on angular",
+        "license": "MIT",
+        "private": true,
+        "dependencies": {
+          "angular": ">= 1.2.6"
+        },
+        "main": [],
+        "ignore": [
+          "**/.*",
+          "node_modules",
+          "bower_components",
+          "test",
+          "tests"
+        ],
+        "_direct": true
+      },
+      "extraneous": true,
+      "linked": true,
+      "dependencies": {
+        "angular": {
+          "endpoint": {
+            "name": "angular",
+            "source": "angular",
+            "target": ">= 1.2.6"
+          },
+          "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\angular",
+          "pkgMeta": {
+            "name": "angular",
+            "version": "1.2.16",
+            "main": "./angular.js",
+            "dependencies": {},
+            "homepage": "https://github.com/angular/bower-angular",
+            "_release": "1.2.16",
+            "_resolution": {
+              "type": "version",
+              "tag": "v1.2.16",
+              "commit": "7ae38b4a0cfced157e3486a0d6e2d299601723bb"
+            },
+            "_source": "git://github.com/angular/bower-angular.git",
+            "_target": "~1",
+            "_originalSource": "angular"
+          },
+          "dependencies": {},
+          "nrDependants": 1
+        }
+      },
+      "nrDependants": 1
+    },
+    "sun-rest": {
+      "endpoint": {
+        "name": "sun-rest",
+        "source": "sun-rest",
+        "target": "0.0.4"
+      },
+      "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\sun-rest",
+      "pkgMeta": {
+        "name": "sun-rest",
+        "version": "0.0.4",
+        "main": [
+          "dist/sun-rest.js"
+        ],
+        "dependencies": {
+          "angular": "~1",
+          "lodash": "~2"
+        },
+        "devDependencies": {
+          "angular-mocks": "~1",
+          "angular-scenario": "~1"
+        },
+        "_direct": true
+      },
+      "extraneous": true,
+      "linked": true,
+      "dependencies": {
+        "angular": {
+          "endpoint": {
+            "name": "angular",
+            "source": "angular",
+            "target": "~1"
+          },
+          "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\angular",
+          "pkgMeta": {
+            "name": "angular",
+            "version": "1.2.16",
+            "main": "./angular.js",
+            "dependencies": {},
+            "homepage": "https://github.com/angular/bower-angular",
+            "_release": "1.2.16",
+            "_resolution": {
+              "type": "version",
+              "tag": "v1.2.16",
+              "commit": "7ae38b4a0cfced157e3486a0d6e2d299601723bb"
+            },
+            "_source": "git://github.com/angular/bower-angular.git",
+            "_target": "~1",
+            "_originalSource": "angular"
+          },
+          "dependencies": {},
+          "nrDependants": 1
+        },
+        "lodash": {
+          "endpoint": {
+            "name": "lodash",
+            "source": "lodash",
+            "target": "~2"
+          },
+          "canonicalDir": "C:\\www\\projects\\secretStorage\\bower_components\\lodash",
+          "pkgMeta": {
+            "name": "lodash",
+            "version": "2.4.1",
+            "main": "dist/lodash.compat.js",
+            "ignore": [
+              ".*",
+              "*.custom.*",
+              "*.template.*",
+              "*.map",
+              "*.md",
+              "/*.min.*",
+              "/lodash.js",
+              "index.js",
+              "component.json",
+              "package.json",
+              "doc",
+              "modularize",
+              "node_modules",
+              "perf",
+              "test",
+              "vendor"
+            ],
+            "homepage": "https://github.com/lodash/lodash",
+            "_release": "2.4.1",
+            "_resolution": {
+              "type": "version",
+              "tag": "2.4.1",
+              "commit": "c7aa842eded639d6d90a5714d3195a8802c86687"
+            },
+            "_source": "git://github.com/lodash/lodash.git",
+            "_target": "~2",
+            "_originalSource": "lodash"
+          },
+          "dependencies": {},
+          "nrDependants": 1
+        }
+      },
+      "nrDependants": 1
+    }
+  },
+  "nrDependants": 0
+}

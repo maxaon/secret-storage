@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en-US" ng-csp>
+<head>
+    <meta charset="UTF-8">
+    <title>Secret storage</title>
+    {% if user.is_authenticated %}
+        <meta name="csrf_token" content="{% csrf_token %}">
+    {% endif %}
+    {% load staticfiles %}
+    {% load compressed %}
+    {% compressed_css 'bower' %}
+    {% compressed_css 'app' %}
+    {% compressed_js 'bower' %}
+    {% compressed_js 'app' %}
+</head>
+<body class="skin-blue" ng-app="app" ui-view>
+</body>
+</html>
