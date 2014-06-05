@@ -7,17 +7,19 @@
     'ui.router',
     'services.localCryptoManager.interceptors'
   ]);
-  module.factory('CitizensCollection', function (sunRestRepository, LocalCryptoManager, $q) {
+  module.factory('CitizensCollection', function (sunRestRepository, CryptoInterceptors, $q) {
     var CitizensCollection = sunRestRepository.create('citizens', {
-      route: '/payments/:id',
+      route: '/citizens/:id',
+      requestInterceptor: CryptoInterceptors.requestInterceptor,
+      responseInterceptor: CryptoInterceptors.responseInterceptor,
       properties: {
-        id: {},
-        citizen: {},
-        amount: {},
-        payment_date: {},
+        id: {forward: true},
+        name: {forward: true},
+        first_name: {},
+        middle_name: {},
         last_name: {},
-        payment_type: {},
-        receiver: {}
+        birth_date: {inputType: 'date'},
+        passport: {inputType: 'textarea'}
       },
       encryptedDataKey: 'data'
     });

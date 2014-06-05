@@ -81,7 +81,9 @@ WSGI_APPLICATION = 'secret_storage.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'demo.db',
+        'NAME': join(BASE_DIR, 'db.sqlite3'),
+        'DEMO_PATH': join(ROOT_PATH, 'demo_dbs')
     }
 }
 

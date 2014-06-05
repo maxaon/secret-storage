@@ -29,3 +29,4 @@ bower_components
 temp/
 *.pem
 *.pub
+demo_dbs/
