@@ -8,7 +8,6 @@ import os
 import hashlib
 import shutil
 
-
 def remember_cookie(cookie, **kwargs):
     remember_cookie.cookie = hashlib.md5(cookie).hexdigest()
 
@@ -31,4 +30,5 @@ class DatabaseWrapper(SQLiteDatabaseWrapper):
             if not os.path.isfile(dst):
                 shutil.copy(src, dst)
             params['database'] = dst
+            remember_cookie.cookie=None
         return params

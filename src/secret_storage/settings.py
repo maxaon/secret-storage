@@ -80,8 +80,8 @@ WSGI_APPLICATION = 'secret_storage.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        # 'ENGINE': 'demo.db',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'demo.db',
         'NAME': join(BASE_DIR, 'db.sqlite3'),
         'DEMO_PATH': join(ROOT_PATH, 'demo_dbs')
     }
@@ -135,7 +135,7 @@ BOWER_INSTALLED_APPS = {
     'https://github.com/maxaon/ng-table.git#b3b759192842b8c46fa341db6361ddcb43686f11': None,
     'https://github.com/maxaon/sun-angular-diff.git#b2d58d4ce0adcb4626a1625d0d0179414dd283a7': None,
     'https://github.com/maxaon/sun-rest.git#89ca41fd33ae23a2d9786b70869250dae559e479': None,
-    'https://github.com/maxaon/ui-router.git#1a77d677f978e4596b0a0d64fe48fea6c97c41fe': None,
+    'angular-ui-router': None,
     'ionicons#1.4.1': None,
     'jquery#2.1.1': None,
     'jquery-migrate#1.2.1': {
