@@ -130,13 +130,16 @@ BOWER_INSTALLED_APPS = {
         'dependencies': ['jquery']
     },
     'angular-bootstrap#0.11.0': None,
+    'angular-cookies#1.2.16': None,
     'angular-gravatar#0.1.4': None,
+    'angular-sanitize#1.2.16': None,
+    'angular-ui-router': None,
     'bootstrap#3.1.1': None,
     'fontawesome#4.1.0': None,
     'https://github.com/maxaon/ng-table.git#b3b759192842b8c46fa341db6361ddcb43686f11': None,
     'https://github.com/maxaon/sun-angular-diff.git#b2d58d4ce0adcb4626a1625d0d0179414dd283a7': None,
     'https://github.com/maxaon/sun-rest.git#89ca41fd33ae23a2d9786b70869250dae559e479': None,
-    'angular-ui-router': None,
+    'https://github.com/maxaon/ui-router.git#1a77d677f978e4596b0a0d64fe48fea6c97c41fe': None,
     'ionicons#1.4.1': None,
     'jquery#2.1.1': None,
     'jquery-migrate#1.2.1': {
@@ -145,7 +148,6 @@ BOWER_INSTALLED_APPS = {
         'name': 'jquery-migrate'
     },
     'lodash#2.4.1': 'dist/lodash.js',
-    'ngSanitize': None
 }
 
 bower_finder = BowerFinder(join(BOWER_COMPONENTS_ROOT, 'bower_components'), BOWER_INSTALLED_APPS)

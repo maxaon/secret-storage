@@ -64,15 +64,19 @@
         }
         var tries = 3;
         if (decrypt && !decrypted) {
+          decrypted = myKey.decrypt(passphrase);
           while (tries && !decrypted) {
-            if (!passphrase) {
-              passphrase = window.prompt((tries === 3) ? 'Enter your key passphrase' : 'Password is wrong. Try again:');
-            }
+            passphrase = window.prompt((tries === 3) ? 'Enter your key passphrase' : 'Password is wrong. Try again:');
             decrypted = myKey.decrypt(passphrase);
             tries--;
           }
+          if (!decrypted) {
+            alert('unable to decrypt key with provided passphrase');
+            return $q.reject('unable to decrypt key with provided passphrase');
+          }
+
         }
-        deferred.resolve(myKey);
+        deferred.resolsve(myKey);
         return deferred.promise;
 
 

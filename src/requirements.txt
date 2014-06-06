@@ -10,7 +10,7 @@ django-guardian==1.2.0
 git+https://github.com/maxaon/django-pipeline.git@f74c486b4783be31f789171ceb9653941c4432af#egg=django_pipeline
 django-security==0.1.22b
 djangorestframework==2.3.13
- git+https://github.com/maxaon/djangular.git@3a34d9f47136ed0b7668404053621b2e242b9ca3#egg=djangular
+git+https://github.com/maxaon/djangular.git@3a34d9f47136ed0b7668404053621b2e242b9ca3#egg=djangular
 futures==2.1.6
 gpglib==0.1.1
 pyasn1==0.1.7
@@ -19,4 +19,3 @@ pycrypto==2.6
 pygpg==1.1
 rsa==3.1.4
 six==1.6.1
-
