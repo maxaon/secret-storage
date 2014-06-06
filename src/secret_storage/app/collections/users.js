@@ -48,7 +48,10 @@
       }
     });
     UsersCollection.authorize = function (authObject) {
-      return UsersCollection.find("authorize", authObject);
+      return UsersCollection.find('authorize', authObject);
+    };
+    UsersCollection.logout = function (fromEverywhere) {
+      return UsersCollection.find('logout', {'from_Everywhere': !!fromEverywhere}).$promise;
     };
 
     return UsersCollection;

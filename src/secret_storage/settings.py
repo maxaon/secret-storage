@@ -80,10 +80,11 @@ WSGI_APPLICATION = 'secret_storage.wsgi.application'
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'demo.db',
         'NAME': join(BASE_DIR, 'db.sqlite3'),
-        'DEMO_PATH': join(ROOT_PATH, 'demo_dbs')
+        'DEMO_PATH': join(ROOT_PATH, 'demo_dbs'),
+        'DEMO_DB': join(BASE_DIR, 'demo.sqlite3')
     }
 }
 
@@ -143,7 +144,8 @@ BOWER_INSTALLED_APPS = {
         'main': 'jquery-migrate.js',
         'name': 'jquery-migrate'
     },
-    'lodash#2.4.1': 'dist/lodash.js'
+    'lodash#2.4.1': 'dist/lodash.js',
+    'ngSanitize': None
 }
 
 bower_finder = BowerFinder(join(BOWER_COMPONENTS_ROOT, 'bower_components'), BOWER_INSTALLED_APPS)

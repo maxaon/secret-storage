@@ -1,8 +1,8 @@
 import gpg
 from rest_framework import status
-from django.contrib.auth import get_user_model, login, authenticate
+from django.contrib.auth import get_user_model, login, authenticate, logout
 from rest_framework.decorators import action, link
-from rest_framework.exceptions import NotAuthenticated, AuthenticationFailed, ParseError
+from rest_framework.exceptions import NotAuthenticated, AuthenticationFailed, ParseError, MethodNotAllowed
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from secret_storage.routes import collection_action, collection_link
@@ -49,10 +49,18 @@ class UserViewSet(ModelViewSet):
         serializer = self.get_serializer(self.object)
         return Response(serializer.data)
 
-    @collection_action(['get', 'post'])
+    @collection_action()
+    def logout(self, request, *args, **kwargs):
+        user = request.user
+        if not user:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        logout(request)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    @collection_action()
     def authorize(self, request, *args, **kwargs):
         if request.method.lower() == 'get':
-            authenticate()
+            # authenticate()
             return Response(data={"ans": "Collection action"})
         else:
             user = authenticate(username=request.DATA['username'], password=request.DATA['password'])

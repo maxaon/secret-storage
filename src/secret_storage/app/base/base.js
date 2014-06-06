@@ -25,14 +25,15 @@
                 if (exp.status === 401 || exp.status === 403) {
                   $state.go('login');
                 }
-                return $q.reject();
+//                return $q.reject();
               })
               .then(function (resp) {
-                return resp.resource;
+
+                return resp && resp.resource;
               })
               .done();
           }
-          ]        }
+          ]}
       });
     $stateProvider
       .state('base-dashboard', {
@@ -52,8 +53,11 @@
       });
   });
   module.controller('BaseController', function ($scope, LocalCryptoManager, user) {
+    if (!user) {
+      return;
+    }
     $scope.currentUser = user;
-    LocalCryptoManager.hasKey($scope.currentUser.email)
+    LocalCryptoManager.hasKey()
       .then(function (hasKey) {
         $scope.hasKey = hasKey;
       }).done();
