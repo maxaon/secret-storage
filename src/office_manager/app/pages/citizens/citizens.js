@@ -10,10 +10,10 @@
     var state = {
       name: 'CitizensCrud',
       url: '/citizens',
-      breadcrumbTitle: "Citizens",
+      breadcrumbTitle: 'Citizens',
 
       parent: 'base-dashboard',
-      title: "Edit",
+      title: 'Edit',
       abstract: true,
       views: {
         '': {
@@ -24,20 +24,20 @@
     var crudOptions = {
       resourceName: 'CitizensCollection',
       list: {
-        pageTitle: "Citizens",
+        pageTitle: 'Citizens',
         columns: {
         }
       },
       edit: {
-        pageTitle: "Edit citizen '{{name}}'",
-        breadcrumbTitle: "{{name}}",
+        pageTitle: 'Edit citizen \'{{name}}\'',
+        breadcrumbTitle: '{{name}}',
         fields: {
 
         }
       },
       create: {
-        pageTitle: "Add new citizen",
-        breadcrumbTitle: "New citizen",
+        pageTitle: 'Add new citizen',
+        breadcrumbTitle: 'New citizen',
         fields: {
           id: {show: false}
 

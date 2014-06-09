@@ -22,8 +22,8 @@
       },
       relations: {
         user: {
-          service: "UsersCollection",
-          property: "user"
+          service: 'UsersCollection',
+          property: 'user'
         },
         citizen: {
 

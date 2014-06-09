@@ -10,10 +10,10 @@
     var state = {
       name: 'PaymentsCrud',
       url: '/payments',
-      breadcrumbTitle: "Payments",
+      breadcrumbTitle: 'Payments',
 
       parent: 'base-dashboard',
-      title: "Edit",
+      title: 'Edit',
       abstract: true,
       views: {
         '': {
@@ -24,23 +24,23 @@
     var crudOptions = {
       resourceName: 'PaymentsCollection',
       list: {
-        pageTitle: "Payments",
+        pageTitle: 'Payments',
         columns: {
           payment_date: {
-            inputType: "date"
+            inputType: 'date'
           }
         }
       },
       edit: {
-        pageTitle: "Edit payments '{{name}}'",
-        breadcrumbTitle: "{{name}}",
+        pageTitle: 'Edit payments \'{{name}}\'',
+        breadcrumbTitle: '{{name}}',
         fields: {
 
         }
       },
       create: {
-        pageTitle: "Add new payment",
-        breadcrumbTitle: "New payment",
+        pageTitle: 'Add new payment',
+        breadcrumbTitle: 'New payment',
         fields: {
           id: {show: false}
 

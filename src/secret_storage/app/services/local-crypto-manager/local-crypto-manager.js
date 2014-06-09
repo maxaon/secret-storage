@@ -42,7 +42,7 @@
       };
       var myKey = null;
       var decrypted = false;
-      var passphrase = null;
+      var passphrase = window.DEBUG_DATA && window.DEBUG_DATA.passphrase;
 
       function getKey(decrypt) {
         var deferred = $q.defer();

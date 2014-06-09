@@ -10,7 +10,8 @@
     'ui.gravatar',
     'sun.diff.filters.textFormatter',
     'services.localCryptoManager',
-    'app.directives.sidebarToggle'
+    'app.directives.sidebarToggle',
+    'ngAnimate'
   ]);
   module.config(function ($stateProvider) {
     $stateProvider
@@ -19,14 +20,12 @@
         templateUrl: 'app.base/base.tpl.html',
         controller: 'BaseController',
         resolve: {
-          user: ["UsersCollection", "$state", "$q", function (UsersCollection, $state, $q) {
-//            return 123
+          user: ['UsersCollection', '$state', '$q', function (UsersCollection, $state, $q) {
             return UsersCollection.find('current').$promise
               .catch(function (exp) {
                 if (exp.status === 401 || exp.status === 403) {
                   $state.go('login');
                 }
-//                return $q.reject();
               })
               .then(function (resp) {
 

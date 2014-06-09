@@ -125,23 +125,25 @@ PIPELINE_CLOSURE_BINARY = r'java -jar ../tools/compiler.jar'
 PIPELINE_NGMIN_BINARY = r'C:\Users\Maxaon\AppData\Roaming\npm\ngmin.cmd'
 
 BOWER_COMPONENTS_ROOT = join(ROOT_PATH)
+# noinspection PyUnresolvedReferences
 BOWER_INSTALLED_APPS = {
-    'angular#1.2.16': {
+    'angular#1.2.17': {
         'dependencies': ['jquery']
     },
+    'angular-animate#1.2.17': None,
     'angular-bootstrap#0.11.0': None,
     'angular-cookies#1.2.16': None,
     'angular-gravatar#0.1.4': None,
+    'angular-resource#1.2.16': None,
     'angular-sanitize#1.2.16': None,
     'angular-ui-router': None,
-    'bootstrap#3.1.1': {"main": [
-        "./dist/css/bootstrap.css",
-        # "./dist/js/bootstrap.js",
-        "./dist/fonts/glyphicons-halflings-regular.eot",
-        "./dist/fonts/glyphicons-halflings-regular.svg",
-        "./dist/fonts/glyphicons-halflings-regular.ttf",
-        "./dist/fonts/glyphicons-halflings-regular.woff"
-    ], },
+    'bootstrap#3.1.1': {
+        'main': [   './dist/css/bootstrap.css',
+        './dist/fonts/glyphicons-halflings-regular.eot',
+        './dist/fonts/glyphicons-halflings-regular.svg',
+        './dist/fonts/glyphicons-halflings-regular.ttf',
+        './dist/fonts/glyphicons-halflings-regular.woff']
+    },
     'fontawesome#4.1.0': None,
     'https://github.com/maxaon/ng-table.git#b3b759192842b8c46fa341db6361ddcb43686f11': None,
     'https://github.com/maxaon/sun-angular-diff.git#b2d58d4ce0adcb4626a1625d0d0179414dd283a7': None,
@@ -154,7 +156,7 @@ BOWER_INSTALLED_APPS = {
         'main': 'jquery-migrate.js',
         'name': 'jquery-migrate'
     },
-    'lodash#2.4.1': 'dist/lodash.js',
+    'lodash#2.4.1': 'dist/lodash.js'
 }
 
 bower_finder = BowerFinder(join(BOWER_COMPONENTS_ROOT, 'bower_components'), BOWER_INSTALLED_APPS)
@@ -254,3 +256,5 @@ if not DEBUG or os.environ.get("COLLECT_STATIC", False):
     replace_conf(PIPELINE_JS, 'bower', 'angular.js', 'angular.min.js', )
     replace_conf(PIPELINE_JS, 'bower', 'lodash.js', 'lodash.min.js', )
 
+if DEBUG:
+    PIPELINE_JS['app']['source_filenames'].insert(0, 'DEBUG.js')

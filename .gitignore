@@ -30,3 +30,4 @@ temp/
 *.pem
 *.pub
 demo_dbs/
+src/secret_storage/static/DEBUG.js
