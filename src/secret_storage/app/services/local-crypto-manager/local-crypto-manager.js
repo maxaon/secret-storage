@@ -76,7 +76,7 @@
           }
 
         }
-        deferred.resolsve(myKey);
+        deferred.resolve(myKey);
         return deferred.promise;
 
 

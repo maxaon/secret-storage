@@ -12,6 +12,7 @@ from djangobower.conf import BOWER_PATH, COMPONENTS_ROOT
 from os.path import join
 import re
 from itertools import izip_longest
+from secret_storage.shortcuts.bower_finder import extract_bower_name
 
 __author__ = 'Maxaon'
 
@@ -50,17 +51,14 @@ class Command(NoArgsCommand):
             f.write(packages)
 
     def freeze_bower(self):
-        def name(general):
-            match = search('http.*/(.*).git', general) or search('([^#]*)', general)
-            return match.groups()[0]
 
 
         adapter = BowerAdapter(BOWER_PATH, COMPONENTS_ROOT)
         packages = list(adapter.freeze())
-        packages_norm = dict(zip(map(name, packages), packages))
+        packages_norm = dict(zip(map(extract_bower_name, packages), packages))
         user_pkgs = settings.BOWER_INSTALLED_APPS
         res = {}
-        for n, d in map(lambda d: (name(d[0]), d), user_pkgs.iteritems()):
+        for n, d in map(lambda d: (extract_bower_name(d[0]), d), user_pkgs.iteritems()):
             if n in packages_norm:
                 res[packages_norm[n]] = d[1]
                 del packages_norm[n]

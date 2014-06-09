@@ -24,9 +24,16 @@
     $scope.credentials = {};
 
     $scope.login = function () {
-      UsersCollection.authorize($scope.credentials).$promise.then(function () {
-        return $state.go('dashboard');
-      }).done();
+      UsersCollection.authorize($scope.credentials).$promise
+        .then(function () {
+          return $state.go('dashboard');
+        })
+        .catch(function (resp) {
+          if (resp.data && resp.data.detail) {
+            $scope.error = resp.data.detail;
+          }
+        })
+        .done();
     };
     $scope.startDemo = function () {
       MessageBox.show('Demo database will be created for you. You will have all access to the site. <br>You password is <span class="label label-info">admin</span>', "Start demo", ['Ok', 'Cancel']).ok(function () {

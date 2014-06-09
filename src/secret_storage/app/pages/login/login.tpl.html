@@ -2,6 +2,9 @@
     <div class="header">Login</div>
     <form name="LoginForm" ng-submit="login()">
         <div class="body bg-gray">
+            <alert type="danger" ng-show="error">
+                {{ error }}
+            </alert>
             <div class="form-group">
                 <input type="text" name="username" ng-model="credentials.username" class="form-control"
                        placeholder="Username">
@@ -17,8 +20,8 @@
         <div class="footer bg-gray ">
             <div class="row">
                 <div class="btn-group col-md-12">
-                    <a ng-click="startDemo()" class="btn bg-maroon col-md-3">Demo</a>
-                    <input type="submit" value="Log in" class="btn bg-olive btn-o col-md-9"/>
+                    <input ng-click="startDemo()" type="button" value="Demo" class="btn bg-maroon col-sm-3"/>
+                    <input type="submit" value="Log in" class="btn bg-olive col-sm-9"/>
                 </div>
             </div>
             <div class="clearfix"></div>

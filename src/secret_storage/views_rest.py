@@ -59,17 +59,13 @@ class UserViewSet(ModelViewSet):
 
     @collection_action()
     def authorize(self, request, *args, **kwargs):
-        if request.method.lower() == 'get':
-            # authenticate()
-            return Response(data={"ans": "Collection action"})
-        else:
-            user = authenticate(username=request.DATA['username'], password=request.DATA['password'])
-            if not user:
-                raise AuthenticationFailed()
-            login(request, user)
+        user = authenticate(username=request.DATA.get('username'), password=request.DATA.get('password'))
+        if not user:
+            raise AuthenticationFailed()
+        login(request, user)
 
-            serializer = self.get_serializer(user)
-            return Response(data=serializer.data)
+        serializer = self.get_serializer(user)
+        return Response(data=serializer.data)
 
     def check_permissions(self, request):
         try:

@@ -4,12 +4,18 @@ import os
 from functools import partial
 from json import loads
 import unittest
+from re import search
 
 __author__ = 'Maxaon'
 
 import re
 
 join = lambda *path: os.path.abspath(os.path.join(*path))
+
+
+def extract_bower_name(general):
+    match = search('http.*/(.*).git', general) or search('([^#]*)', general)
+    return match.groups()[0]
 
 
 class BowerPkg(object):
@@ -71,7 +77,7 @@ class BowerFinder(object):
             desc = self.apps[pkg]
         else:
             for pkg_name, pkg_desc in self.apps.iteritems():
-                if (isinstance(pkg_desc, dict) and pkg_desc.get('name') == pkg) or (pkg in pkg_name):
+                if (isinstance(pkg_desc, dict) and pkg_desc.get('name') == pkg) or extract_bower_name(pkg_name) == pkg:
                     desc = pkg_desc
                     if isinstance(desc, (list, tuple)):
                         desc = {'main': desc}

@@ -134,7 +134,14 @@ BOWER_INSTALLED_APPS = {
     'angular-gravatar#0.1.4': None,
     'angular-sanitize#1.2.16': None,
     'angular-ui-router': None,
-    'bootstrap#3.1.1': None,
+    'bootstrap#3.1.1': {"main": [
+        "./dist/css/bootstrap.css",
+        # "./dist/js/bootstrap.js",
+        "./dist/fonts/glyphicons-halflings-regular.eot",
+        "./dist/fonts/glyphicons-halflings-regular.svg",
+        "./dist/fonts/glyphicons-halflings-regular.ttf",
+        "./dist/fonts/glyphicons-halflings-regular.woff"
+    ], },
     'fontawesome#4.1.0': None,
     'https://github.com/maxaon/ng-table.git#b3b759192842b8c46fa341db6361ddcb43686f11': None,
     'https://github.com/maxaon/sun-angular-diff.git#b2d58d4ce0adcb4626a1625d0d0179414dd283a7': None,
@@ -155,7 +162,10 @@ PIPELINE_CSS = {
     'bower': {
         'source_filenames': bower_finder.get('.css') + [
             'angular/angular-csp.css',
-            'theme/admin-lte.css'
+            # 'theme/bootstrap.css',
+            'theme/admin-lte.css',
+            'theme/additional.css',
+
         ],
         'output_filename': 'bower.css'
     }
