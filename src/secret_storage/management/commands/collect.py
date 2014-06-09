@@ -10,7 +10,6 @@ from django.core.files.storage import FileSystemStorage
 from django.core.management.base import CommandError, NoArgsCommand
 from django.utils.encoding import smart_text
 from django.utils.datastructures import SortedDict
-from django.utils.functional import LazyObject
 
 from django.contrib.staticfiles import finders, storage
 from secret_storage.storage import TempStorage

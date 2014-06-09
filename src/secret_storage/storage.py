@@ -1,14 +1,25 @@
+from __future__ import unicode_literals
 import os
 from django.conf import settings
+from django.core.files.base import ContentFile
+from django.utils.encoding import smart_str
+from pipeline.packager import Package, Packager
 
-__author__ = 'Maxaon'
-from pipeline.storage import PipelineCachedStorage, PipelineMixin, CachedStaticFilesStorage, StaticFilesStorage
+from django.contrib.staticfiles.finders import find
+from django.core.files.base import ContentFile
+from django.utils.encoding import smart_str
+
+from pipeline.compilers import Compiler
+from pipeline.compressors import Compressor
+from pipeline.conf import settings
+from pipeline.exceptions import PackageNotFound
+from pipeline.glob import glob
+from pipeline.signals import css_compressed, js_compressed
+from pipeline.storage import default_storage
+from pipeline.storage import CachedStaticFilesStorage, StaticFilesStorage
 
 
-class TempStorage(StaticFilesStorage):
-    def __init__(self, location=None, base_url=None, *args, **kwargs):
-        location = location or settings.TEMP_ROOT
-        super(TempStorage, self).__init__(location, base_url, *args, **kwargs)
+
 
 
 class PublicCachedStorage(CachedStaticFilesStorage):
@@ -24,9 +35,6 @@ class PublicCachedStorage(CachedStaticFilesStorage):
         if dry_run:
             return
 
-        from pipeline.packager import Packager
-
-        storage = options.get('temp_storage', self)
         storage = self
         self.to_process_paths = paths
         self.additionaly_processed = []
@@ -71,8 +79,7 @@ class PublicCachedStorage(CachedStaticFilesStorage):
         if ex:
             raise ex[0]
 
-        for f in cached:
-            yield f
+        return cached
 
     def hashed_name(self, name, content=None):
         try:
@@ -83,8 +90,7 @@ class PublicCachedStorage(CachedStaticFilesStorage):
                     if "?" in name:
                         name = name[:name.index("?")]
                     name = name.replace("/", os.sep)
-                    for name, hashed_name, processed in super(PublicCachedStorage, self).post_process(
-                            {name: self.to_process_paths[name]}):
+                    for name, hashed_name, processed in super(PublicCachedStorage, self).post_process({name: self.to_process_paths[name]}):
                         if isinstance(processed, Exception):
                             raise processed
                         self.additionaly_processed.append((name, hashed_name, processed))

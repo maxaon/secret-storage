@@ -111,17 +111,20 @@ TEMP_ROOT = join(ROOT_PATH, 'temp')
 TEMPORARY_STORAGE = 'secret_storage.storage.TempStorage'
 
 STATICFILES_FINDERS = (
+    'pipeline.storage.MyFinder',
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'djangobower.finders.BowerFinder',
     'djangular.finders.NamespacedAngularAppDirectoriesFinder',
 )
 STATICFILES_STORAGE = 'secret_storage.storage.PublicCachedStorage'
+PIPELINE_STORAGE = 'pipeline.storage.PipelineFinderStorage'
 PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yui.YUICompressor'
 PIPELINE_YUI_BINARY = 'java -jar ../tools/yuicompressor-2.4.8.jar'
 # PIPELINE_JS_COMPRESSOR=None
 PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.closure.ClosureCompressor'
-PIPELINE_CLOSURE_BINARY = r'java -jar ../tools/compiler.jar'
+PIPELINE_CLOSURE_ARGUMENTS = '--language_in=ECMASCRIPT5'
+PIPELINE_CLOSURE_BINARY = r'java -jar ../tools/compiler.jar '
 PIPELINE_NGMIN_BINARY = r'C:\Users\Maxaon\AppData\Roaming\npm\ngmin.cmd'
 
 BOWER_COMPONENTS_ROOT = join(ROOT_PATH)
@@ -138,11 +141,11 @@ BOWER_INSTALLED_APPS = {
     'angular-sanitize#1.2.16': None,
     'angular-ui-router': None,
     'bootstrap#3.1.1': {
-        'main': [   './dist/css/bootstrap.css',
-        './dist/fonts/glyphicons-halflings-regular.eot',
-        './dist/fonts/glyphicons-halflings-regular.svg',
-        './dist/fonts/glyphicons-halflings-regular.ttf',
-        './dist/fonts/glyphicons-halflings-regular.woff']
+        'main': ['./dist/css/bootstrap.css',
+                 './dist/fonts/glyphicons-halflings-regular.eot',
+                 './dist/fonts/glyphicons-halflings-regular.svg',
+                 './dist/fonts/glyphicons-halflings-regular.ttf',
+                 './dist/fonts/glyphicons-halflings-regular.woff']
     },
     'fontawesome#4.1.0': None,
     'https://github.com/maxaon/ng-table.git#b3b759192842b8c46fa341db6361ddcb43686f11': None,
@@ -253,8 +256,8 @@ if not DEBUG or os.environ.get("COLLECT_STATIC", False):
     PIPELINE_COMPILERS = (
         'pipeline.compilers.ngmin.NgMinCompiler',
     )
-    replace_conf(PIPELINE_JS, 'bower', 'angular.js', 'angular.min.js', )
-    replace_conf(PIPELINE_JS, 'bower', 'lodash.js', 'lodash.min.js', )
+    replace_conf(PIPELINE_JS, 'bower', 'angular.js', 'angular.min.js')
+    replace_conf(PIPELINE_JS, 'bower', 'lodash.js', 'lodash.min.js')
 
-if DEBUG:
-    PIPELINE_JS['app']['source_filenames'].insert(0, 'DEBUG.js')
+if DEBUG and not os.environ.get("COLLECT_STATIC", False):
+    PIPELINE_JS['app']['source_filenames'].insert(0, 'DEBUGs.js')
