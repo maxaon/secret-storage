@@ -9,7 +9,8 @@
     'collections.users',
     'ui.gravatar',
     'sun.diff.filters.textFormatter',
-    'services.localCryptoManager'
+    'services.localCryptoManager',
+    'app.directives.sidebarToggle'
   ]);
   module.config(function ($stateProvider) {
     $stateProvider
