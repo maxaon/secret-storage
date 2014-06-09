@@ -2,7 +2,9 @@
 This is prototype of the SPA. 
 Main porpoise of this project is to create framework for applications with client-side encryption 
 and verification of server responses.
- 
+
+All source code in [development branch](https://github.com/maxaon/secret-storage/tree/develop). 
+
 ## How it works 
 
 For the user:
@@ -43,6 +45,9 @@ Running demo of the dev branch:  [http://demo.sunset.dp.ua](http://demo.sunset.d
 ## Project status  
 This is early dev demo version
 
+## Remarks!
+
+You must understand all pros, cons and possible threats of using client-side encryption in such environment like a browser.
                                            
 
 
