@@ -51,9 +51,10 @@
         breadcrumbState: states.list.name
       })
       .list.merge({
-        breadcrumbTitle: "Citizens",
+        breadcrumbTitle: 'Citizens',
         group: 'AdminCRUD',
-        title: 'Citizens'
+        title: 'Citizens',
+        sidebarIcon: 'fa fa-users'
       })
       .register();
   });

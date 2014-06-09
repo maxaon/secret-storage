@@ -5,3 +5,7 @@
 .btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
     margin-left: 0;
 }
+
+.navbar-nav > .user-menu > .dropdown-menu {
+    padding: 5px 0;
+}

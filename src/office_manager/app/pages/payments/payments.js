@@ -54,9 +54,10 @@
         breadcrumbState: states.list.name
       })
       .list.merge({
-        breadcrumbTitle: "Payments",
+        breadcrumbTitle: 'Payments',
         group: 'AdminCRUD',
-        title: 'Payments'
+        title: 'Payments',
+        sidebarIcon:'fa fa-money'
       })
       .register();
   });
